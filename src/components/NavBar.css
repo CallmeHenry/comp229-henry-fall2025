@@ -1,0 +1,76 @@
+.navbar {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 1;
+    height: 20svh;
+    width: 100svw;
+    padding-right: 8svw;
+    margin-left: -8svw;
+}
+
+.navbar__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.navbar__logo-link {
+    height: 100%;
+}
+
+.navbar__logo-img {
+    height: 100%;
+}
+
+.navbar__ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+.navbar__li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Underline animation by: https://www.30secondsofcode.org/css/s/hover-underline-animation/*/
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-accent-magenta);
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+}
+
+.hover-underline-animation.left::after {
+    transform-origin: bottom right;
+}
+
+.hover-underline-animation.left:hover::after {
+    transform-origin: bottom left;
+}
