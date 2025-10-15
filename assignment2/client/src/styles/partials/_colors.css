@@ -1,0 +1,21 @@
+:root {
+    --primary-accent-magenta: #C850C0;
+    --primary-cta-green: #08872B;
+    --primary-cta-green-dark: rgba(8, 135, 43, 0.49);
+    --primary-background-darkgray: #0d1117;
+    --primary-background-white: #ffffff;
+
+    /* Light mode */
+    --primary-text-darkgrey: #1F2328;
+    --secondary-text-lightgrey: #656D76;
+    --tertiary-text-lightgrey: #6E7781;
+
+    /* Dark mode */
+    --primary-text-white-dm: #E6EDF3;
+    --secondary-text-lightgrey-dm: #7D8590;
+    --tertiary-text-lightgrey-dm: #6E7681;
+
+    --secondary-accent-violet: #4158D0;
+    --secondary-cta-white: #f6f8fa
+}
+

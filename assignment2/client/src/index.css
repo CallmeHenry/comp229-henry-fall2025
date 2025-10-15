@@ -1,0 +1,15 @@
+@import "./styles/partials/_typekit.css";
+@import "./styles/partials/_colors.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100svh;
+    background: radial-gradient(circle at top left, #121212 80%, #0F0F0F 100%);
+    padding-left: 8svw;
+    padding-right: 8svw;
+    box-sizing: border-box;
+}

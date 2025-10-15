@@ -1,0 +1,69 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+}
+
+.home__hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home__hero-name {
+    color: var(--primary-text-white-dm);
+    transition: color 250ms ease;
+}
+
+.home__hero-name:hover {
+    color: var(--primary-accent-magenta);
+}
+
+.home__hero-eyebrow {
+    color: var(--secondary-text-lightgrey-dm);
+    transition: color 250ms ease;
+}
+
+.home__hero-eyebrow:hover {
+    color: var(--secondary-accent-violet);
+}
+
+.home__hero-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.home__hero-contact-button {
+    background-color: var(--primary-cta-green);
+    border: none;
+    color: var(--primary-text-white-dm);
+    border-radius: 8px;
+    padding: 12px 24px 12px 24px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.home__hero-contact-button:hover {
+    background-color: var(--primary-cta-green-dark);
+    cursor: pointer;
+}
+
+.home__hero-projects-button {
+    background-color: rgba(246, 248, 250, 0.17);
+    border: none;
+    color: var(--primary-text-white-dm);
+    border-radius: 8px;
+    padding: 12px 24px 12px 24px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.home__hero-projects-button:hover {
+    background-color: rgba(246, 248, 250, 0.08);
+    cursor: pointer;
+}

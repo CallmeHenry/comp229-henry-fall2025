@@ -1,0 +1,49 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 100svh;
+    padding-top: 10svh;
+}
+
+.about__left-container,
+.about__right-container {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.about__portrait {
+    border-radius: 8px;
+    max-height: 600px;
+    height: 100%;
+    max-width: 900px;
+    align-self: end;
+}
+
+
+.about__resume-button {
+    background-color: rgba(246, 248, 250, 0.17);
+    border: none;
+    color: var(--primary-text-white-dm);
+    border-radius: 8px;
+    padding: 12px 24px 12px 24px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.about__resume-button:hover {
+    background-color: rgba(246, 248, 250, 0.08);
+    cursor: pointer;
+}
+
+.about__resume-button a {
+    text-decoration: none;
+    color: inherit;
+}

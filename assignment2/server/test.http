@@ -1,0 +1,196 @@
+### CONTACTS API
+
+# Create new contact (captures _id)
+POST http://localhost:3000/api/contacts
+Content-Type: application/json
+
+{
+  "firstname": "firstTest",
+  "lastname": "lastTest",
+  "email": "contact@test.ca"
+}
+
+> {%
+    client.global.set("contactId", response.body.id);
+%}
+
+###
+
+# Get all contacts
+GET http://localhost:3000/api/contacts
+
+###
+
+# Get contact by ID
+GET http://localhost:3000/api/contacts/{{contactId}}
+
+###
+
+# Update contact by ID
+PUT http://localhost:3000/api/contacts/{{contactId}}
+Content-Type: application/json
+
+{
+  "firstname": "firstUpdated",
+  "lastname": "lastUpdated",
+  "email": "contact.updated@test.ca"
+}
+
+###
+
+# Delete contact by ID
+DELETE http://localhost:3000/api/contacts/{{contactId}}
+
+###
+
+# Delete all contacts
+DELETE http://localhost:3000/api/contacts
+
+
+### PROJECTS API
+
+# Create new project (captures _id)
+POST http://localhost:3000/api/projects
+Content-Type: application/json
+
+{
+  "title": "projectTest",
+  "firstname": "projFirst",
+  "lastname": "projLast",
+  "email": "project@test.ca",
+  "completion": "2025-12-01",
+  "description": "This is a fake project for testing."
+}
+
+> {%
+    client.global.set("projectId", response.body.id);
+%}
+
+###
+
+# Get all projects
+GET http://localhost:3000/api/projects
+
+###
+
+# Get project by ID
+GET http://localhost:3000/api/projects/{{projectId}}
+
+###
+
+# Update project by ID
+PUT http://localhost:3000/api/projects/{{projectId}}
+Content-Type: application/json
+
+{
+  "title": "projectUpdated",
+  "description": "Updated fake project description."
+}
+
+###
+
+# Delete project by ID
+DELETE http://localhost:3000/api/projects/{{projectId}}
+
+###
+
+# Delete all projects
+DELETE http://localhost:3000/api/projects
+
+
+### QUALIFICATIONS API
+
+# Create new qualification (captures _id)
+POST http://localhost:3000/api/qualifications
+Content-Type: application/json
+
+{
+  "title": "qualificationTest",
+  "firstname": "qualFirst",
+  "lastname": "qualLast",
+  "email": "qualification@test.ca",
+  "completion": "2024-06-01",
+  "description": "Fake qualification entry for testing."
+}
+
+> {%
+    client.global.set("qualificationId", response.body.id);
+%}
+
+###
+
+# Get all qualifications
+GET http://localhost:3000/api/qualifications
+
+###
+
+# Get qualification by ID
+GET http://localhost:3000/api/qualifications/{{qualificationId}}
+
+###
+
+# Update qualification by ID
+PUT http://localhost:3000/api/qualifications/{{qualificationId}}
+Content-Type: application/json
+
+{
+  "description": "Updated fake qualification description."
+}
+
+###
+
+# Delete qualification by ID
+DELETE http://localhost:3000/api/qualifications/{{qualificationId}}
+
+###
+
+# Delete all qualifications
+DELETE http://localhost:3000/api/qualifications
+
+
+### USERS API
+
+# Create new user (captures _id)
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "nameTest",
+  "email": "test@test.ca",
+  "password": "passwordTest"
+}
+
+> {%
+    client.global.set("userId", response.body.id);
+%}
+
+###
+
+# Get all users
+GET http://localhost:3000/api/users
+
+###
+
+# Get user by ID
+GET http://localhost:3000/api/users/{{userId}}
+
+###
+
+# Update user by ID
+PUT http://localhost:3000/api/users/{{userId}}
+Content-Type: application/json
+
+{
+  "name": "nameUpdated",
+  "email": "updated@test.ca"
+}
+
+###
+
+# Delete user by ID
+DELETE http://localhost:3000/api/users/{{userId}}
+
+###
+
+# Delete all users
+DELETE http://localhost:3000/api/users
