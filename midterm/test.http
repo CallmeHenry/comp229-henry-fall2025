@@ -1,0 +1,103 @@
+### BASE URL
+@baseUrl = http://localhost:3000
+
+
+### Create new director (captures _id)
+POST {{baseUrl}}/directors
+Content-Type: application/json
+
+{
+  "name": "Henry Nguyen",
+  "country": "Canada",
+  "bio": "test"
+}
+
+> {%
+    client.global.set("directorId", response.body.id);
+%}
+
+
+### Get all directors
+GET {{baseUrl}}/directors
+
+
+### Get director by ID
+GET {{baseUrl}}/directors/{{directorId}}
+
+
+### Update director by ID
+PUT {{baseUrl}}/directors/{{directorId}}
+Content-Type: application/json
+
+{
+  "bio": "Updated test"
+}
+
+
+### Delete director by ID
+DELETE {{baseUrl}}/directors/{{directorId}}
+
+
+
+### Create new movie (captures _id)
+POST {{baseUrl}}/movies
+Content-Type: application/json
+
+{
+  "title": "Movie test",
+  "director": "{{directorId}}",
+  "year": 2025,
+  "genre": "action"
+}
+
+> {%
+    client.global.set("movieId", response.body.id);
+%}
+
+
+### Get all movies
+GET {{baseUrl}}/movies
+
+
+### Filter movies by year
+GET {{baseUrl}}/movies?year=1997
+
+
+### Filter movies by director
+GET {{baseUrl}}/movies?director={{directorId}}
+
+
+### Filter movies by genre
+GET {{baseUrl}}/movies?genre=Animation
+
+
+### Get movie by ID
+GET {{baseUrl}}/movies/{{movieId}}
+
+
+### Update movie by ID
+PUT {{baseUrl}}/movies/{{movieId}}
+Content-Type: application/json
+
+{
+  "genre": "fantasy"
+}
+
+
+### Delete movie by ID
+DELETE {{baseUrl}}/movies/{{movieId}}
+
+
+### Invalid director ID
+GET {{baseUrl}}/directors/123
+
+
+### Invalid movie year (should fail validation)
+POST {{baseUrl}}/movies
+Content-Type: application/json
+
+{
+  "title": "Invalid movie",
+  "director": "{{directorId}}",
+  "year": 5000
+}
